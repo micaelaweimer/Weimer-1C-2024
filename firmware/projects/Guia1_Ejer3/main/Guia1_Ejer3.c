@@ -19,7 +19,7 @@
  * |:----------:|:-----------------------------------------------|
  * | 12/09/2023 | Document creation		                         |
  *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
+ * @author Weimer, Micalea
  *
  */
 
@@ -28,6 +28,8 @@
 #include <stdint.h>
 #include "led.h"
 #include "switch.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 /*==================[macros and definitions]=================================*/
 #define ON 00000001
 #define OFF 00000000
@@ -38,31 +40,31 @@ struct leds
 {
 	uint8_t n_led;      //indica el número de led a controlar
 	uint8_t n_ciclos;   //indica la cantidad de ciclos de encendido/apagado
-	uint8_t periodo;    //indica el tiempo de cada ciclo
+	uint16_t periodo;   //indica el tiempo de cada ciclo
 	uint8_t mode;       //ON, OFF, TOGGLE
 } my_leds; 
 
 /*==================[internal functions declaration]=========================*/
-void control_led (struct leds *my_leds)
+void control_led (struct leds *auxled)
 {
-	switch (my_leds->mode)
+	switch (auxled->mode)
 	{
 	case ON:
-		switch (my_leds->n_led)
-		{
-		case 1:
-			
-			break;
-		
-		default:
-			break;
-		}
+		LedOn(auxled->n_led);
 		break;
 	case OFF:
-		
+		LedOff(auxled->n_led);
 		break;
 	case TOGGLE:
-		
+		int j=0;
+		while (j<auxled->n_ciclos)
+		{
+			LedToggle(auxled->n_led);
+			for(int i=0; i<auxled->periodo/100; i++){
+			vTaskDelay(100 / portTICK_PERIOD_MS);
+			}
+			j++;
+		}
 		break;
 	default:
 		break;
@@ -70,7 +72,17 @@ void control_led (struct leds *my_leds)
 }
 
 /*==================[external functions definition]==========================*/
-void app_main(void){	
+void app_main(void){
+	uint8_t teclas;
+	LedsInit();
+	SwitchesInit();
+
+	my_leds.mode=TOGGLE;
+	my_leds.n_ciclos=100;
+	my_leds.periodo=500;
+	my_leds.n_led=LED_1;
+	
+	control_led(&my_leds);
 
 }
 /*==================[end of file]============================================*/
