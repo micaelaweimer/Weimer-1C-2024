@@ -29,6 +29,9 @@
         },
         {
             "path": "projects/P2_2_MedidorDistanciaPorUltrasonidoInterruptores"
+        },
+        {
+            "path": "projects/P2_3_MedidorDistanciaConPuertoSerie"
         }
     ],
     "settings": {
