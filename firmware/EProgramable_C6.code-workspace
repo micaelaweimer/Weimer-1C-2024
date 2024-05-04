@@ -32,6 +32,9 @@
         },
         {
             "path": "projects/P2_3_MedidorDistanciaConPuertoSerie"
+        },
+        {
+            "path": "projects/P2_4_Osciloscopio"
         }
     ],
     "settings": {

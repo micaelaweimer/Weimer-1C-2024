@@ -1,4 +1,4 @@
-/*! @mainpage Template
+/*! @mainpage Medidor de distancia por ultrasonido empleando interrupciones
  *
  * @section genDesc General Description
  *
@@ -17,9 +17,9 @@
  *
  * |   Date	    | Description                                    |
  * |:----------:|:-----------------------------------------------|
- * | 12/09/2023 | Document creation		                         |
+ * | 12/04/2024 | Document creation		                         |
  *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
+ * @author Weimer, Micaela (micaela.weimer@ingenieria.uner.edu.ar)
  *
  */
 
@@ -39,12 +39,22 @@
 #define CONFIG_PERIOD 1000000
 /*==================[internal data definition]===============================*/
 uint16_t distancia_cm;
+/*!
+* @brief Variable booleana que controla inicio y detencion de la medicion
+*/
 bool control = false;
+/*!
+* @brief Variable booleana que controla lo que se muestra por display
+*/
 bool pause = false;
 
 TaskHandle_t leer_distancia_handle = NULL;
 TaskHandle_t mostrar_distancia_handle = NULL;
 /*==================[internal functions declaration]=========================*/
+/*!
+* @brief Enciende y apaga los leds segun la distancia que se lee con el sensor
+* @param distancia Distancia leida por el sensor
+*/
 void voometro(uint16_t distancia)
 {
 	if (distancia < 10)
@@ -73,16 +83,26 @@ void voometro(uint16_t distancia)
 	}
 }
 
+/*!
+* @brief Controla una variable booleana para encernder y apagar los leds y display
+*/
 void Tecla1_OnOff(void)
 {
 	control = !control;
 }
 
+/*!
+* @brief Controla una variable booleana para fijar una valor de distancia en el display
+*/
 void Tecla2_Pause(void)
 {
 	pause = !pause;
 }
 
+/*!
+* @brief Muestra la distancia en cm por display o apaga los leds y display segun es estado de
+*        una variable booleana
+*/
 void MostrarDistancia(void *pvParameter)
 {
 	while (1)
@@ -104,6 +124,9 @@ void MostrarDistancia(void *pvParameter)
 	}
 }
 
+/*!
+* @brief Lee la distancia en cm y la almacena en una variable global
+*/ 
 void LeerDistancia(void *pvParameter)
 {
 	while (1)
@@ -116,6 +139,9 @@ void LeerDistancia(void *pvParameter)
 	}
 }
 
+/*!
+* @brief Envia una notificacion a las funciones LeerDistancia y MostrarDistancia para que comiencen
+*/ 
 void FuncTimerA_Distancia(void *param)
 {
 	vTaskNotifyGiveFromISR(leer_distancia_handle, pdFALSE);
@@ -124,11 +150,13 @@ void FuncTimerA_Distancia(void *param)
 /*==================[external functions definition]==========================*/
 void app_main(void)
 {
+	/* Inicializaciones */
 	LedsInit();
 	LcdItsE0803Init();
 	SwitchesInit();
 	HcSr04Init(GPIO_3, GPIO_2);
 
+	 /* Configuracion del timer */
 	timer_config_t timer_distancia = {
 		.timer = TIMER_A,
 		.period = CONFIG_PERIOD,
@@ -136,6 +164,7 @@ void app_main(void)
 		.param_p = NULL};
 	TimerInit(&timer_distancia);
 
+	// Tareas
 	xTaskCreate(&LeerDistancia, "LeerDistancia", 2048, NULL, 5, &leer_distancia_handle);
 	xTaskCreate(&MostrarDistancia, "MostrarDistancia", 2048, NULL, 5, &mostrar_distancia_handle);
 
