@@ -1,4 +1,4 @@
-/*! @mainpage Template
+/*! @mainpage Medidor de distancia por ultrasonido
  *
  * @section genDesc General Description
  *
@@ -17,9 +17,9 @@
  *
  * |   Date	    | Description                                    |
  * |:----------:|:-----------------------------------------------|
- * | 12/09/2023 | Document creation		                         |
+ * | 05/04/2024 | Document creation		                         |
  *
- * @author Weimer Micaela (amicaela.weimer@ingenieria.uner.edu.ar)
+ * @author Weimer, Micaela (amicaela.weimer@ingenieria.uner.edu.ar)
  *
  */
 
@@ -38,9 +38,19 @@
 #define PERIODO_TECLAS 100
 /*==================[internal data definition]===============================*/
 uint16_t distancia_cm;
+/*!
+* @brief Variable booleana que controla inicio y detencion de la medicion
+*/
 bool control = true;
+/*!
+* @brief Variable booleana que controla lo que se muestra por display
+*/
 bool pause = false;
 /*==================[internal functions declaration]=========================*/
+/*!
+* @brief Enciende y apaga los leds segun la distancia que se lee con el sensor
+* @param distancia Distancia leida por el sensor
+*/
 void voometro(uint16_t distancia)
 {
 	if (distancia < 10)
@@ -68,6 +78,10 @@ void voometro(uint16_t distancia)
 		LedOn(LED_3);
 	}
 }
+
+/*!
+* @brief Lee la distancia en cm y la almacena en una variable global
+*/ 
 void LeerDistancia(void *pvParameter)
 {
 	while (1)
@@ -79,6 +93,10 @@ void LeerDistancia(void *pvParameter)
 		vTaskDelay(PERIODO / portTICK_PERIOD_MS);
 	}
 }
+
+/*!
+* @brief Lee las teclas presionadas y realiza la accion correspondiente
+*/
 void LeerTecla(void *pvParameter)
 {
 	uint8_t teclas;
@@ -97,6 +115,10 @@ void LeerTecla(void *pvParameter)
 		vTaskDelay(PERIODO_TECLAS / portTICK_PERIOD_MS);
 	}
 }
+
+/*!
+* @brief Muestra la distancia en cm por display
+*/
 void MostrarDistancia(void *pvParameter)
 {
 	while (1)
