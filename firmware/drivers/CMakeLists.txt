@@ -15,6 +15,7 @@ set(srcs
     "microcontroller/src/ble_hid_mcu.c"
     "microcontroller/src/rtc_mcu.c"
     "devices/src/led.c"
+    "devices/src/LDR.c"
     "devices/src/switch.c"
     "devices/src/lcditse0803.c"
     "devices/src/hc_sr04.c"
