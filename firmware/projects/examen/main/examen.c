@@ -78,8 +78,8 @@ TaskHandle_t mensajes_handle = NULL;
 TaskHandle_t leer_teclas_handle = NULL;
 /*==================[internal functions declaration]=========================*/
 /*!
-* @brief Funcion que lee las teclas presionadas y realiza la accion correspondiente
-*/
+ * @brief Funcion que lee las teclas presionadas y realiza la accion correspondiente
+ */
 void leerTeclas(void *pvParameter)
 {
 	uint8_t teclas;
@@ -100,9 +100,9 @@ void leerTeclas(void *pvParameter)
 }
 
 /*!
-* @brief Funcion lee el valor del sensor de humedad y
-*        controla la humedad de la plantera a traves del control de una bomba
-*/
+ * @brief Funcion lee el valor del sensor de humedad y
+ *        controla la humedad de la plantera a traves del control de una bomba
+ */
 void controlAgua(void *pvParameter)
 {
 	while (1)
@@ -125,18 +125,18 @@ void controlAgua(void *pvParameter)
 }
 
 /*!
-* @brief Funcion que lee el valor de pH y lo controla a traves del control de dos bombas
-*/
+ * @brief Funcion que lee el valor de pH y lo controla a traves del control de dos bombas
+ */
 void controlPh(void *pvParameter)
 {
 	while (1)
 	{
 		if (control)
 		{
-			float lectura_aux;	
-			AnalogInputReadSingle(CH1, &lectura_aux); //leo el dato
-			lectura_aux = lectura_aux*(3/1024); // ajusto segun voltaje maximo
-			lectura = lectura_aux*(14/3); // encuentro el valor entre 0 y 14V
+			float lectura_aux, voltaje;
+			AnalogInputReadSingle(CH1, &lectura_aux); // leo el dato
+			voltaje = lectura_aux * (3 / 1024);		  // ajusto segun voltaje maximo
+			lectura = voltaje * (14 / 3);			  // encuentro el valor entre 0 y 14V
 
 			if (lectura > 6.7)
 			{
@@ -159,8 +159,8 @@ void controlPh(void *pvParameter)
 }
 
 /*!
-* @brief Funcion que envia mensajes de estado a traves de la UART
-*/
+ * @brief Funcion que envia mensajes de estado a traves de la UART
+ */
 void mensajes(void *pvParameter)
 {
 	while (1)
@@ -205,7 +205,7 @@ void mensajes(void *pvParameter)
 void app_main(void)
 {
 	SwitchesInit();
-	
+
 	// GPIOs para control de humedad y bomba de agua
 	controlHumedad.pin = GPIO_16;
 	controlHumedad.dir = GPIO_INPUT;
@@ -225,20 +225,20 @@ void app_main(void)
 	GPIOInit(bombaPhB.pin, bombaPhB.dir);
 
 	/* Configuracion de la entrada analogica */
-	analog_input_config_t senial_analogica = {
+	analog_input_config_t senialPH = {
 		.input = CH1,
 		.mode = ADC_SINGLE,
 		.func_p = NULL,
 		.param_p = NULL};
-	AnalogInputInit(&senial_analogica);
+	AnalogInputInit(&senialPH);
 
 	/* Configuracion del puerto serie */
-	serial_config_t puertoSeriePC = {
+	serial_config_t puertoPC = {
 		.port = UART_PC,
 		.baud_rate = 115200, // debo fijarme si el puerto serie esta en este mismo valor
 		.func_p = NULL,
 		.param_p = NULL};
-	UartInit(&puertoSeriePC);
+	UartInit(&puertoPC);
 
 	// Tareas
 	xTaskCreate(&controlAgua, "ControlAgua", 2048, NULL, 5, &control_agua_handle);
