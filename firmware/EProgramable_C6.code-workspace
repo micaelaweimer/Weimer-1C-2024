@@ -38,6 +38,9 @@
         },
         {
             "path": "projects/ProyectoIntegrador"
+        },
+        {
+            "path": "projects/examen"
         }
     ],
     "settings": {
@@ -93,7 +96,8 @@
             "soc_caps.h": "c",
             "mpu6050.h": "c",
             "i2c_mcu.h": "c",
-            "compare": "c"
+            "compare": "c",
+            "stdio.h": "c"
         },
     },
     "tasks": {
