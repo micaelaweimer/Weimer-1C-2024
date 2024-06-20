@@ -126,8 +126,12 @@
 /*!
  * @brief lux normal para comparacion
  */
-#define LUX_NORMAL 500
+#define LUX_NORMAL 5003
+
 /*==================[internal data definition]===============================*/
+/*!
+ * @brief Estructura para configuracion de gpio
+ */
 typedef struct
 {
     gpio_t pin;
@@ -199,7 +203,7 @@ void read_data(uint8_t *data, uint8_t length)
 
 /*!
  * @brief Controla el giro de los motores
- * @param dir Direccion de debe seguir
+ * @param dir Direccion que debe seguir
  */
 void controlRuedas(char dir)
 {
