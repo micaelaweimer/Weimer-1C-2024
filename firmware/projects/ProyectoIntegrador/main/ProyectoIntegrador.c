@@ -1,4 +1,4 @@
-/*! @mainpage Robot esquiva obstaculos
+/*! @mainpage Proyecto integrador: Robot esquiva obstaculos
  *
  * @section genDesc General Description
  *
