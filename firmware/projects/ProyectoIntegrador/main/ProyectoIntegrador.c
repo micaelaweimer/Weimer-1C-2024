@@ -53,6 +53,7 @@
  * |   Date	    | Description        |
  * |:----------:|:-------------------|
  * | 24/05/2024 | Document creation	 |
+ * | 20/06/2024 | Finished document	 |
  *
  * @author Weimer Micaela (micaela.weimer@ingenieria.uner.edu.ar)
  *
