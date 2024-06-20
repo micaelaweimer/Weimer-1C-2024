@@ -1,0 +1,776 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProyectoIntegrador: Referencia del archivo C:/Repositorio/Weimer-1C-2024/firmware/projects/ProyectoIntegrador/main/ProyectoIntegrador.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ProyectoIntegrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_proyecto_integrador_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo ProyectoIntegrador.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pwm__mcu_8h_source.html">pwm_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="servo__sg90_8h_source.html">servo_sg90.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ble__mcu_8h_source.html">ble_mcu.h</a>&quot;</code><br />
+<code>#include &quot;LDR.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+</div>
+<p><a href="_proyecto_integrador_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpio_conf__t.html">gpioConf_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura para configuracion de gpio.  <a href="structgpio_conf__t.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a1e1b4b157642a13cca9d61f800520470" id="r_a1e1b4b157642a13cca9d61f800520470"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e1b4b157642a13cca9d61f800520470">MIA</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393af5c2b7f44743385580550aa81e4b4f31">GPIO_16</a></td></tr>
+<tr class="memdesc:a1e1b4b157642a13cca9d61f800520470"><td class="mdescLeft">&#160;</td><td class="mdescRight">definicion de gpio para motor  <br /></td></tr>
+<tr class="separator:a1e1b4b157642a13cca9d61f800520470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d11258d2beb9cc8297f7c4eff586868" id="r_a9d11258d2beb9cc8297f7c4eff586868"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d11258d2beb9cc8297f7c4eff586868">MIB</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a></td></tr>
+<tr class="memdesc:a9d11258d2beb9cc8297f7c4eff586868"><td class="mdescLeft">&#160;</td><td class="mdescRight">definicion de gpio para motor  <br /></td></tr>
+<tr class="separator:a9d11258d2beb9cc8297f7c4eff586868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da5c1a44b6868aec79aa054b2590671" id="r_a1da5c1a44b6868aec79aa054b2590671"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da5c1a44b6868aec79aa054b2590671">MDA</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a272b8d60ca888339e5095000b50ba5b1">GPIO_17</a></td></tr>
+<tr class="memdesc:a1da5c1a44b6868aec79aa054b2590671"><td class="mdescLeft">&#160;</td><td class="mdescRight">definicion de gpio para motor  <br /></td></tr>
+<tr class="separator:a1da5c1a44b6868aec79aa054b2590671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3409bba9f64c9215f4c457d0f565adc" id="r_ab3409bba9f64c9215f4c457d0f565adc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3409bba9f64c9215f4c457d0f565adc">MDB</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a></td></tr>
+<tr class="memdesc:ab3409bba9f64c9215f4c457d0f565adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">definicion de gpio para motor  <br /></td></tr>
+<tr class="separator:ab3409bba9f64c9215f4c457d0f565adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3085f4877388c18954b353865f58cd56" id="r_a3085f4877388c18954b353865f58cd56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3085f4877388c18954b353865f58cd56">PERIODO</a>&#160;&#160;&#160;25000</td></tr>
+<tr class="memdesc:a3085f4877388c18954b353865f58cd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">periodo de lectura del sensor hc sr04  <br /></td></tr>
+<tr class="separator:a3085f4877388c18954b353865f58cd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a49d83e3f84bdbcb994b468e86d12b" id="r_ac9a49d83e3f84bdbcb994b468e86d12b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9a49d83e3f84bdbcb994b468e86d12b">giroDer</a>&#160;&#160;&#160;-90</td></tr>
+<tr class="memdesc:ac9a49d83e3f84bdbcb994b468e86d12b"><td class="mdescLeft">&#160;</td><td class="mdescRight">grados de giro para el servo  <br /></td></tr>
+<tr class="separator:ac9a49d83e3f84bdbcb994b468e86d12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1faed1592fc14907613cab8a2d99612c" id="r_a1faed1592fc14907613cab8a2d99612c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1faed1592fc14907613cab8a2d99612c">giroIzq</a>&#160;&#160;&#160;90</td></tr>
+<tr class="memdesc:a1faed1592fc14907613cab8a2d99612c"><td class="mdescLeft">&#160;</td><td class="mdescRight">grados de giro para el servo  <br /></td></tr>
+<tr class="separator:a1faed1592fc14907613cab8a2d99612c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001920a4123e2619de4be916677e45d8" id="r_a001920a4123e2619de4be916677e45d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001920a4123e2619de4be916677e45d8">posCentral</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a001920a4123e2619de4be916677e45d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">grados de giro para el servo  <br /></td></tr>
+<tr class="separator:a001920a4123e2619de4be916677e45d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df1b4cad09974bfc68858fad7cdc054" id="r_a3df1b4cad09974bfc68858fad7cdc054"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3df1b4cad09974bfc68858fad7cdc054">CONFIG_BLINK_PERIOD</a>&#160;&#160;&#160;500</td></tr>
+<tr class="memdesc:a3df1b4cad09974bfc68858fad7cdc054"><td class="mdescLeft">&#160;</td><td class="mdescRight">periodo para bluetooth  <br /></td></tr>
+<tr class="separator:a3df1b4cad09974bfc68858fad7cdc054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e30a90dc1f68956eb260a38cb8a729" id="r_ac0e30a90dc1f68956eb260a38cb8a729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0e30a90dc1f68956eb260a38cb8a729">PERIODO_LED</a>&#160;&#160;&#160;500000</td></tr>
+<tr class="memdesc:ac0e30a90dc1f68956eb260a38cb8a729"><td class="mdescLeft">&#160;</td><td class="mdescRight">periodo de lectura del LDR  <br /></td></tr>
+<tr class="separator:ac0e30a90dc1f68956eb260a38cb8a729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1cd76599fb3d13e03b66557ea1e66de" id="r_af1cd76599fb3d13e03b66557ea1e66de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1cd76599fb3d13e03b66557ea1e66de">GPIO_LED</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a0e8bab7ea873c22eb90aa81116208917">GPIO_18</a></td></tr>
+<tr class="memdesc:af1cd76599fb3d13e03b66557ea1e66de"><td class="mdescLeft">&#160;</td><td class="mdescRight">definicion del gpio para led  <br /></td></tr>
+<tr class="separator:af1cd76599fb3d13e03b66557ea1e66de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5f586d59525d71f5419ec9c231cbe8" id="r_a0d5f586d59525d71f5419ec9c231cbe8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d5f586d59525d71f5419ec9c231cbe8">LUX_NORMAL</a>&#160;&#160;&#160;5003</td></tr>
+<tr class="memdesc:a0d5f586d59525d71f5419ec9c231cbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">lux normal para comparacion  <br /></td></tr>
+<tr class="separator:a0d5f586d59525d71f5419ec9c231cbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a2ea94281ed83bf8c0f26ecbb5690bc4d" id="r_a2ea94281ed83bf8c0f26ecbb5690bc4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ea94281ed83bf8c0f26ecbb5690bc4d">FuncTimerA_Distancia</a> (void *param)</td></tr>
+<tr class="memdesc:a2ea94281ed83bf8c0f26ecbb5690bc4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia una notificacion a la funcion controlDistancia.  <br /></td></tr>
+<tr class="separator:a2ea94281ed83bf8c0f26ecbb5690bc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118a7599fe9e826bf2892853ca8b918b" id="r_a118a7599fe9e826bf2892853ca8b918b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a118a7599fe9e826bf2892853ca8b918b">FuncTimerB_Intesnidad</a> (void *param)</td></tr>
+<tr class="memdesc:a118a7599fe9e826bf2892853ca8b918b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia una notificacion a la funcion controlIntensidad.  <br /></td></tr>
+<tr class="separator:a118a7599fe9e826bf2892853ca8b918b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56e1ff0f71e003f2e08c6ec294528b1" id="r_ab56e1ff0f71e003f2e08c6ec294528b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab56e1ff0f71e003f2e08c6ec294528b1">read_data</a> (uint8_t *data, uint8_t length)</td></tr>
+<tr class="memdesc:ab56e1ff0f71e003f2e08c6ec294528b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recibe y envia mensajes por bluethoot.  <br /></td></tr>
+<tr class="separator:ab56e1ff0f71e003f2e08c6ec294528b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec70beed9a9e76d8560e1ceb860534d" id="r_afec70beed9a9e76d8560e1ceb860534d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afec70beed9a9e76d8560e1ceb860534d">controlRuedas</a> (char dir)</td></tr>
+<tr class="memdesc:afec70beed9a9e76d8560e1ceb860534d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controla el giro de los motores.  <br /></td></tr>
+<tr class="separator:afec70beed9a9e76d8560e1ceb860534d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5187769e3c68b132952444ef466fcd" id="r_a4c5187769e3c68b132952444ef466fcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c5187769e3c68b132952444ef466fcd">controlDistancia</a> (void *pvParameter)</td></tr>
+<tr class="memdesc:a4c5187769e3c68b132952444ef466fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee y controla la distancia medida por el sensor (hc sr04)  <br /></td></tr>
+<tr class="separator:a4c5187769e3c68b132952444ef466fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916f103ce5b72890a1456bfc4a3bc256" id="r_a916f103ce5b72890a1456bfc4a3bc256"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a916f103ce5b72890a1456bfc4a3bc256">controlIntensidad</a> (void *pvParameter)</td></tr>
+<tr class="memdesc:a916f103ce5b72890a1456bfc4a3bc256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee y controla la intensidad medida por el sensor (LDR)  <br /></td></tr>
+<tr class="separator:a916f103ce5b72890a1456bfc4a3bc256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a74f63acd4cf816d04b90c470e56a2f7c" id="r_a74f63acd4cf816d04b90c470e56a2f7c"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74f63acd4cf816d04b90c470e56a2f7c">control</a> = false</td></tr>
+<tr class="memdesc:a74f63acd4cf816d04b90c470e56a2f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable booleana para control de encendido y apagado del programa.  <br /></td></tr>
+<tr class="separator:a74f63acd4cf816d04b90c470e56a2f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70ab9e889e851a8621645a870ec2b80" id="r_ac70ab9e889e851a8621645a870ec2b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac70ab9e889e851a8621645a870ec2b80">pwm_motores</a> [2]</td></tr>
+<tr class="memdesc:ac70ab9e889e851a8621645a870ec2b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector de pwm para control de motores  <br /></td></tr>
+<tr class="separator:ac70ab9e889e851a8621645a870ec2b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec40b15ff3098bdb2425eb4dc9c11a18" id="r_aec40b15ff3098bdb2425eb4dc9c11a18"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec40b15ff3098bdb2425eb4dc9c11a18">distancia</a></td></tr>
+<tr class="memdesc:aec40b15ff3098bdb2425eb4dc9c11a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distancia en cm leida por el sensor de ultrasonido.  <br /></td></tr>
+<tr class="separator:aec40b15ff3098bdb2425eb4dc9c11a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dabfa1d48b7d96ce8422a68a671de82" id="r_a5dabfa1d48b7d96ce8422a68a671de82"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dabfa1d48b7d96ce8422a68a671de82">intensidad</a></td></tr>
+<tr class="memdesc:a5dabfa1d48b7d96ce8422a68a671de82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Almacena el valor de intensidad leido por el sensor.  <br /></td></tr>
+<tr class="separator:a5dabfa1d48b7d96ce8422a68a671de82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adede53d06eaeec773ed06e27049dd231" id="r_adede53d06eaeec773ed06e27049dd231"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adede53d06eaeec773ed06e27049dd231">control_distancia_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:adede53d06eaeec773ed06e27049dd231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1369202e5cba22f1ae2b144857a9b4dc" id="r_a1369202e5cba22f1ae2b144857a9b4dc"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1369202e5cba22f1ae2b144857a9b4dc">control_intensidad_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a1369202e5cba22f1ae2b144857a9b4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="a3df1b4cad09974bfc68858fad7cdc054" name="a3df1b4cad09974bfc68858fad7cdc054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df1b4cad09974bfc68858fad7cdc054">&#9670;&#160;</a></span>CONFIG_BLINK_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_BLINK_PERIOD&#160;&#160;&#160;500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>periodo para bluetooth </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00117">117</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ac9a49d83e3f84bdbcb994b468e86d12b" name="ac9a49d83e3f84bdbcb994b468e86d12b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a49d83e3f84bdbcb994b468e86d12b">&#9670;&#160;</a></span>giroDer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define giroDer&#160;&#160;&#160;-90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>grados de giro para el servo </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00104">104</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00265">controlDistancia()</a>.</p>
+
+</div>
+</div>
+<a id="a1faed1592fc14907613cab8a2d99612c" name="a1faed1592fc14907613cab8a2d99612c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1faed1592fc14907613cab8a2d99612c">&#9670;&#160;</a></span>giroIzq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define giroIzq&#160;&#160;&#160;90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>grados de giro para el servo </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00108">108</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00265">controlDistancia()</a>.</p>
+
+</div>
+</div>
+<a id="af1cd76599fb3d13e03b66557ea1e66de" name="af1cd76599fb3d13e03b66557ea1e66de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1cd76599fb3d13e03b66557ea1e66de">&#9670;&#160;</a></span>GPIO_LED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GPIO_LED&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a0e8bab7ea873c22eb90aa81116208917">GPIO_18</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definicion del gpio para led </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00126">126</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00327">controlIntensidad()</a>.</p>
+
+</div>
+</div>
+<a id="a0d5f586d59525d71f5419ec9c231cbe8" name="a0d5f586d59525d71f5419ec9c231cbe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d5f586d59525d71f5419ec9c231cbe8">&#9670;&#160;</a></span>LUX_NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUX_NORMAL&#160;&#160;&#160;5003</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lux normal para comparacion </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00130">130</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00327">controlIntensidad()</a>.</p>
+
+</div>
+</div>
+<a id="a1da5c1a44b6868aec79aa054b2590671" name="a1da5c1a44b6868aec79aa054b2590671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da5c1a44b6868aec79aa054b2590671">&#9670;&#160;</a></span>MDA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MDA&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a272b8d60ca888339e5095000b50ba5b1">GPIO_17</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definicion de gpio para motor </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00091">91</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ab3409bba9f64c9215f4c457d0f565adc" name="ab3409bba9f64c9215f4c457d0f565adc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3409bba9f64c9215f4c457d0f565adc">&#9670;&#160;</a></span>MDB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MDB&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a4f3bac8a4733f9e96aa952fb1d9b0a7f">GPIO_23</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definicion de gpio para motor </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00095">95</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00209">controlRuedas()</a>.</p>
+
+</div>
+</div>
+<a id="a1e1b4b157642a13cca9d61f800520470" name="a1e1b4b157642a13cca9d61f800520470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1b4b157642a13cca9d61f800520470">&#9670;&#160;</a></span>MIA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIA&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393af5c2b7f44743385580550aa81e4b4f31">GPIO_16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definicion de gpio para motor </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00083">83</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a9d11258d2beb9cc8297f7c4eff586868" name="a9d11258d2beb9cc8297f7c4eff586868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d11258d2beb9cc8297f7c4eff586868">&#9670;&#160;</a></span>MIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIB&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definicion de gpio para motor </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00087">87</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00209">controlRuedas()</a>.</p>
+
+</div>
+</div>
+<a id="a3085f4877388c18954b353865f58cd56" name="a3085f4877388c18954b353865f58cd56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3085f4877388c18954b353865f58cd56">&#9670;&#160;</a></span>PERIODO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PERIODO&#160;&#160;&#160;25000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>periodo de lectura del sensor hc sr04 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00100">100</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ac0e30a90dc1f68956eb260a38cb8a729" name="ac0e30a90dc1f68956eb260a38cb8a729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e30a90dc1f68956eb260a38cb8a729">&#9670;&#160;</a></span>PERIODO_LED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PERIODO_LED&#160;&#160;&#160;500000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>periodo de lectura del LDR </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00122">122</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a001920a4123e2619de4be916677e45d8" name="a001920a4123e2619de4be916677e45d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001920a4123e2619de4be916677e45d8">&#9670;&#160;</a></span>posCentral</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define posCentral&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>grados de giro para el servo </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00112">112</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00265">controlDistancia()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00353">353</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="ble__hid__mcu_8h_source.html#l00039">BLE_CONNECTED</a>, <a class="el" href="ble__hid__mcu_8h_source.html#l00038">BLE_DISCONNECTED</a>, <a class="el" href="ble__hid__mcu_8h_source.html#l00037">BLE_OFF</a>, <a class="el" href="ble__mcu_8c_source.html#l00452">BleInit()</a>, <a class="el" href="ble__mcu_8c_source.html#l00530">BleStatus()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00117">CONFIG_BLINK_PERIOD</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00162">control_distancia_handle</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00163">control_intensidad_handle</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00265">controlDistancia()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00327">controlIntensidad()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00139">gpioConf_t::dir</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00168">FuncTimerA_Distancia()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00176">FuncTimerB_Intesnidad()</a>, <a class="el" href="gpio__mcu_8h_source.html#l00054">GPIO_2</a>, <a class="el" href="gpio__mcu_8h_source.html#l00073">GPIO_21</a>, <a class="el" href="gpio__mcu_8h_source.html#l00055">GPIO_3</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00126">GPIO_LED</a>, <a class="el" href="gpio__mcu_8h_source.html#l00044">GPIO_OUTPUT</a>, <a class="el" href="gpio__mcu_8c_source.html#l00067">GPIOInit()</a>, <a class="el" href="hc__sr04_8c_source.html#l00034">HcSr04Init()</a>, <a class="el" href="led_8h_source.html#l00034">LED_1</a>, <a class="el" href="led_8h_source.html#l00033">LED_2</a>, <a class="el" href="led_8h_source.html#l00032">LED_3</a>, <a class="el" href="led_8c_source.html#l00065">LedOff()</a>, <a class="el" href="led_8c_source.html#l00046">LedOn()</a>, <a class="el" href="led_8c_source.html#l00031">LedsInit()</a>, <a class="el" href="led_8c_source.html#l00084">LedToggle()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00091">MDA</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00095">MDB</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00083">MIA</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00087">MIB</a>, <a class="el" href="ili9341_8c_source.html#l00019">NULL</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00100">PERIODO</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00122">PERIODO_LED</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00138">gpioConf_t::pin</a>, <a class="el" href="pwm__mcu_8h_source.html#l00034">PWM_0</a>, <a class="el" href="pwm__mcu_8h_source.html#l00035">PWM_1</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00150">pwm_motores</a>, <a class="el" href="pwm__mcu_8c_source.html#l00039">PWMInit()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00186">read_data()</a>, <a class="el" href="servo__sg90_8h_source.html#l00034">SERVO_2</a>, <a class="el" href="servo__sg90_8c_source.html#l00033">ServoInit()</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a>, <a class="el" href="timer__mcu_8c_source.html#l00055">TimerInit()</a> y <a class="el" href="timer__mcu_8c_source.html#l00110">TimerStart()</a>.</p>
+
+</div>
+</div>
+<a id="a4c5187769e3c68b132952444ef466fcd" name="a4c5187769e3c68b132952444ef466fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5187769e3c68b132952444ef466fcd">&#9670;&#160;</a></span>controlDistancia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlDistancia </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pvParameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee y controla la distancia medida por el sensor (hc sr04) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00265">265</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="ble__mcu_8c_source.html#l00544">BleSendString()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00145">control</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00209">controlRuedas()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00155">distancia</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00104">giroDer</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00108">giroIzq</a>, <a class="el" href="hc__sr04_8c_source.html#l00045">HcSr04ReadDistanceInCentimeters()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00112">posCentral</a>, <a class="el" href="servo__sg90_8h_source.html#l00034">SERVO_2</a> y <a class="el" href="servo__sg90_8c_source.html#l00051">ServoMove()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a916f103ce5b72890a1456bfc4a3bc256" name="a916f103ce5b72890a1456bfc4a3bc256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916f103ce5b72890a1456bfc4a3bc256">&#9670;&#160;</a></span>controlIntensidad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlIntensidad </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pvParameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee y controla la intensidad medida por el sensor (LDR) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00327">327</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto_integrador_8c_source.html#l00145">control</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00126">GPIO_LED</a>, <a class="el" href="gpio__mcu_8c_source.html#l00086">GPIOOff()</a>, <a class="el" href="gpio__mcu_8c_source.html#l00081">GPIOOn()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00160">intensidad</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00130">LUX_NORMAL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="afec70beed9a9e76d8560e1ceb860534d" name="afec70beed9a9e76d8560e1ceb860534d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec70beed9a9e76d8560e1ceb860534d">&#9670;&#160;</a></span>controlRuedas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlRuedas </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>dir</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controla el giro de los motores. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>Direccion que debe seguir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00209">209</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8c_source.html#l00081">GPIOOn()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00095">MDB</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00087">MIB</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00150">pwm_motores</a>, <a class="el" href="pwm__mcu_8c_source.html#l00081">PWMOn()</a> y <a class="el" href="pwm__mcu_8c_source.html#l00115">PWMSetDutyCycle()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00265">controlDistancia()</a>.</p>
+
+</div>
+</div>
+<a id="a2ea94281ed83bf8c0f26ecbb5690bc4d" name="a2ea94281ed83bf8c0f26ecbb5690bc4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea94281ed83bf8c0f26ecbb5690bc4d">&#9670;&#160;</a></span>FuncTimerA_Distancia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerA_Distancia </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia una notificacion a la funcion controlDistancia. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00168">168</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto_integrador_8c_source.html#l00162">control_distancia_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a118a7599fe9e826bf2892853ca8b918b" name="a118a7599fe9e826bf2892853ca8b918b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a118a7599fe9e826bf2892853ca8b918b">&#9670;&#160;</a></span>FuncTimerB_Intesnidad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerB_Intesnidad </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia una notificacion a la funcion controlIntensidad. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00176">176</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto_integrador_8c_source.html#l00163">control_intensidad_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ab56e1ff0f71e003f2e08c6ec294528b1" name="ab56e1ff0f71e003f2e08c6ec294528b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab56e1ff0f71e003f2e08c6ec294528b1">&#9670;&#160;</a></span>read_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read_data </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recibe y envia mensajes por bluethoot. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+    <tr><td class="paramname">length</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00186">186</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="ble__mcu_8c_source.html#l00544">BleSendString()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00145">control</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a74f63acd4cf816d04b90c470e56a2f7c" name="a74f63acd4cf816d04b90c470e56a2f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f63acd4cf816d04b90c470e56a2f7c">&#9670;&#160;</a></span>control</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool control = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable booleana para control de encendido y apagado del programa. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00145">145</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00265">controlDistancia()</a>, <a class="el" href="_proyecto_integrador_8c_source.html#l00327">controlIntensidad()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00186">read_data()</a>.</p>
+
+</div>
+</div>
+<a id="adede53d06eaeec773ed06e27049dd231" name="adede53d06eaeec773ed06e27049dd231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adede53d06eaeec773ed06e27049dd231">&#9670;&#160;</a></span>control_distancia_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t control_distancia_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00162">162</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00168">FuncTimerA_Distancia()</a>.</p>
+
+</div>
+</div>
+<a id="a1369202e5cba22f1ae2b144857a9b4dc" name="a1369202e5cba22f1ae2b144857a9b4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1369202e5cba22f1ae2b144857a9b4dc">&#9670;&#160;</a></span>control_intensidad_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t control_intensidad_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00163">163</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00176">FuncTimerB_Intesnidad()</a>.</p>
+
+</div>
+</div>
+<a id="aec40b15ff3098bdb2425eb4dc9c11a18" name="aec40b15ff3098bdb2425eb4dc9c11a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec40b15ff3098bdb2425eb4dc9c11a18">&#9670;&#160;</a></span>distancia</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t distancia</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Distancia en cm leida por el sensor de ultrasonido. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00155">155</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00265">controlDistancia()</a>.</p>
+
+</div>
+</div>
+<a id="a5dabfa1d48b7d96ce8422a68a671de82" name="a5dabfa1d48b7d96ce8422a68a671de82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dabfa1d48b7d96ce8422a68a671de82">&#9670;&#160;</a></span>intensidad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t intensidad</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Almacena el valor de intensidad leido por el sensor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00160">160</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00327">controlIntensidad()</a>.</p>
+
+</div>
+</div>
+<a id="ac70ab9e889e851a8621645a870ec2b80" name="ac70ab9e889e851a8621645a870ec2b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70ab9e889e851a8621645a870ec2b80">&#9670;&#160;</a></span>pwm_motores</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> pwm_motores[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>vector de pwm para control de motores </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto_integrador_8c_source.html#l00150">150</a> del archivo <a class="el" href="_proyecto_integrador_8c_source.html">ProyectoIntegrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto_integrador_8c_source.html#l00353">app_main()</a> y <a class="el" href="_proyecto_integrador_8c_source.html#l00209">controlRuedas()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2668aa82a847a13ac699381b9e8abb0d.html">Weimer-1C-2024</a></li><li class="navelem"><a class="el" href="dir_3df00c551700731c846dbbabc43a5b2f.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4d92e8c2210bb128220a875d5d831dc0.html">projects</a></li><li class="navelem"><a class="el" href="dir_cbad8c2eadb2a2872379bac0f2c446e4.html">ProyectoIntegrador</a></li><li class="navelem"><a class="el" href="dir_786a3ef30040f4c2029148806e51acd4.html">main</a></li><li class="navelem"><a class="el" href="_proyecto_integrador_8c.html">ProyectoIntegrador.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>
